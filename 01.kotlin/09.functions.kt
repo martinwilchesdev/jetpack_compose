@@ -1,3 +1,5 @@
+import kotlin.math.round
+
 fun main() {
     /*
         Las funciones son bloques de codigo que se pueden ejecutar multiples veces.
@@ -10,8 +12,12 @@ fun main() {
 
     val sum = sum(12,12)
     println(sum) // 24
-    val div = division(20.0, 10.0)
+    val div = division(10.0, 3.0)
     println(div) // 2.0 
+
+    // La utilidad principal de las funciones con retorno, es que el valor retornado podra seguir siendo utilizado en el resto de la aplicacion
+    val roundDiv = round(div)
+    println(roundDiv)
 }
 
 /*
