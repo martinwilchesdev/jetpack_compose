@@ -7,7 +7,7 @@ package com.example.appname
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        
+
         // Dentro del setContent se define todo lo que se visualiza en la aplicacion
         setContent {
             Greeting("Android")

@@ -1,5 +1,5 @@
 class MainActivity : ComponentActivity() {
-    /**/
+    /* ... */
 }
 
 // Los modificadores ayudan a personalizar la apariencia y el comportamiento de los componentes
@@ -30,5 +30,5 @@ fun Content() {
         .padding(50.dp)
         .background(Color.Black)
 
-    ** En el ejemplo anterior primero se aplica el padding y luego el color de fondo, por lo cual el espacio que ocupe el padding no tendra el color de fondo especificado
+    En el ejemplo anterior primero se aplica el padding y luego el color de fondo, por lo cual el espacio que ocupe el padding no tendra el color de fondo especificado
 */
