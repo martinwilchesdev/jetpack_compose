@@ -10,7 +10,7 @@ fun main() {
         println("Es menor de edad")
     }
 
-    // if anidados
+    // if anidados `Bloque if dentro de otro bloque if`
     val genre = "Male"
 
     if (x >= 18) {

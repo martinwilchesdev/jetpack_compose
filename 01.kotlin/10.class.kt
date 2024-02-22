@@ -1,10 +1,9 @@
 /*
-    Las clases son estructuras que permiten crear multiples objetos con propiedades y metodos en comun
-
-    Por convencion los nombres de las clases inician en mayuscula y se definen en plural
+    Las clases son estructuras que permiten crear multiples objetos con propiedades y metodos en comun.
+    Por convencion los nombres de las clases inician en mayuscula y se definen en plural.
 */
 class Personas {
-    // Atributos :: Variables
+    // Atributos -> Variables
     var name = ""
     var age = 0
 
@@ -14,13 +13,16 @@ class Personas {
         this.age = age
     }
 
-    // Metodos :: Funciones
+    // Metodos -> Funciones
     fun hello() {
         println("Hello, my name is $name, I am $age years old")
     }
 }
 
-// Definicion de clase con constructor primario
+/*
+    Definicion de clase con constructor primario.
+        En este caso se omite utilizar el metodo constructor, y las propiedades de clase son definidas como parametros de la misma.
+*/
 class Usuarios(private var name:String, private var email:String) {
     fun login() {
         println("Login with user: $name, email: $email")

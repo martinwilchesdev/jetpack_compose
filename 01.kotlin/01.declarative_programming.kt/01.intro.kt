@@ -12,12 +12,11 @@ fun main() {
 
 fun sumarListaImperativa(lista: List<Int>): Int {
     /* Programacion imperativa
-
             Es un paradigma de programacion que se enfoca en especificar de forma explicita los pasos a seguir para lograr un resultado deseado.
-
             En este paradigma es comun el uso de ciclos y condiciones para lograr el resultado esperado.
     */
     var res = 0
+    // Mediante el ciclo for se realiza la suma de cada uno de los elementos contenidos en la lista y valor acumalado se asigna a una variable res.
     for(i in lista) {
         res += i
     }
@@ -36,11 +35,9 @@ fun filtrarPares(lista: List<Int>): List<Int> {
     return res
 }
 
-
 fun sumarListaDeclarativa(lista: List<Int>): Int {
     /* Programacion declarativa
-
-        Es un paradigma de programacion que se centra en describir el que se quiere lograr en lugar de como hacer el paso a paso.
+        Es un paradigma de programacion que se centra en describir el que se quiere lograr en lugar de como hacer el paso a paso para lograr el resultado esperado.
     */
-    return lista.sum()
+    return lista.sum() // El metodo sum() se encarga de sumar los elementos contenidos en la lista. (Al invocar la funcion se evita realizar el paso a paso para sumar cada uno de los elementos contenidos)
 }

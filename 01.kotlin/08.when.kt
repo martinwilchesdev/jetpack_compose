@@ -2,9 +2,9 @@ fun main() {
     val dia = 1
     val x = 5
 
-    // La estructura when es similar a la estructura switch utilizada en otros lenguajes.
+    // La estructura when es similar a la estructura switch utilizada en otros lenguajes.hjnnhhhhhhhhhhhhhhn
     when (dia) {
-        // Las opciones de la estructura when deben ser del mismo tipo de dato que el valor evaluado 
+        // Las opciones de la estructura when deben ser del mismo tipo de dato que el valor evaluado
         1 -> println("Lunes")
         2 -> println("Martes")
         3 -> println("Miercoles")
@@ -14,7 +14,10 @@ fun main() {
     }
 
     when(x) {
-        // Dentro de la estructura when es posible definir rangos como opciones para evaluar un valor especifico
+        /*
+            Dentro de la estructura when es posible definir rangos como opciones para evaluar un valor especifico.
+            Un rango numerico es definido mediante la notacion .., eg x..n
+        */
         in 1..10 -> println("Esta en el rango")
         in 10..29 -> println("Esta fuera de rango")
         else -> println("El valor ingresado es invalido")

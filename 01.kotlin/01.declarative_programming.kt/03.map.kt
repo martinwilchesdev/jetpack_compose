@@ -6,7 +6,7 @@ fun main() {
         Personas("Paola", 25)
     )
 
-    val multiplicar = personas.map { it.age * 2 }
+    val multiplicar = personas.map { it.age * 2 } // La edad de cada una de las personas se multiplicara por 2 y posteriormente el nombre y la nueva edad seran asignados a un nuevo arreglo
     println(multiplicar) // [58, 60, 50]
 }
 

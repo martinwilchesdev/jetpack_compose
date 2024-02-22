@@ -1,19 +1,18 @@
-import kotlin.math.round
+// En agunas ocasiones es necesario realizar importaciones para poder ejecutar ciertos tipos de funcionalidades
+import kotlin.math.round // Genera un valor numero aleatorio
 
 fun main() {
     /*
         Las funciones son bloques de codigo que se pueden ejecutar multiples veces.
-
         Las funciones deben ser definidas fuera de la funcion main().
-
-        Al invocar una funcion, el valor de los parametros que esta recibe son pasados como argumentos.  
+        Al invocar una funcion, el valor de los parametros que esta recibe son pasados como argumentos.
     */
     suma(20, 30) // 50
 
     val sum = sum(12,12)
     println(sum) // 24
     val div = division(10.0, 3.0)
-    println(div) // 2.0 
+    println(div) // 2.0
 
     // La utilidad principal de las funciones con retorno, es que el valor retornado podra seguir siendo utilizado en el resto de la aplicacion
     val roundDiv = round(div)
@@ -22,7 +21,6 @@ fun main() {
 
 /*
     Una funcion puede recibir parametros.
-
     Los parametros de la funcion son definidos utilizando la siguiente notacion
         nombre_parametro:tipo_dato
 */
@@ -33,16 +31,13 @@ fun suma(v1:Int, v2:Int) {
 }
 
 /* Funciones lambda
-
     Las funciones lambda pueden ser anonimas, con lo cual se define el cuerpo de la funcion y posteriormente se asigna a una variable
 */
 val sum = {x:Int, y:Int -> x + y}
 
 /* Funciones con retorno
-
     Este tipo de funciones retornan un valor el cual podra ser reutilizado y manejado en el codigo.
-
-    A las funciones con retorno es necesario especificarles el tipo de dato que retornara dicha funcion 
+    A las funciones con retorno es necesario especificarles el tipo de dato que retornara dicha funcion
         fun <fun_name>(): tipo_dato {...}
 */
 fun division(v1:Double, v2:Double): Double {
