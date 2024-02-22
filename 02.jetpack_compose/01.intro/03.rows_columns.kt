@@ -1,20 +1,14 @@
-class MainActivity: ComponentActivity() {
-    /* ... */
-}
-
-// Las aplicaciones Android con Jetpack Compose son maquetados utilizando filas y columna
+// En Jetpack Compose las aplicaciones son maquetados utilizando filas y columna
 
 @Composable
 fun Content() {
-    // Es importante elegir un contenedor inicial para luego dentro de este agregar las filas y columnas
-
     /*
-        Al definir una columna como contenedor es recomendable utilizar de forma inicial los modificadores
-
+        Es importante elegir un contenedor inicial para luego dentro de este agregar las filas y columnas.
+        Al definir una columna como contenedor principal es recomendable utilizar de forma inicial los modificadores.
             .fillMaxSize()
             .wrapContentSize(Alignment.center)
 
-        Con los anteriores modificadores, la maquetacion de la aplicacion se iniciara desde el centro de la interfaz de la aplicacion
+        ** Con los anteriores modificadores, la maquetacion de la aplicacion se iniciara desde el centro de la interfaz de la aplicacion, con lo cual resulta mas facil distribuir el espacio que ocuparan cada uno de los componentes.
         Las columnas ubican a sus hijos en una secuencia vertical
     */
     Column(
@@ -29,15 +23,12 @@ fun Content() {
 
         /*
             Al definir una fila es recomendable de forma inicial utilizar el siguiente modificador
-
                 .fillMaxWidth
 
-            A su vez el par parametro-valor .horizontalArrangement = Arrangement.spaceEvenly posiciona a los elementos hijos de manera que ocupen todo el ancho disponible de la fila
+            Y el par parametro-valor .horizontalArrangement = Arrangement.spaceEvenly, el cual posiciona a los elementos hijos de manera que ocupen todo el ancho disponible de la fila, dado por el modificador fillMaxWidth.
 
-            Con los anteriores modificadores, la fila ocupara todo el ancho disponible
+            Las filas posicionan a sus hijos a traves de una secuencia horizontal
         */
-
-        // Las filas posicionan a sus hijos a traves de una secuencia horizontal
         Row(
             modifier = Modifier
                 .fillMaxWidth(),
@@ -56,7 +47,7 @@ fun Content() {
 
 @Composable
 fun Space() {
-    // El Spacer es un componente que representa un espacio vacio en el layout, cuyo tamaño puede ser alterado a traves de modificadores
+    // El Spacer es un componente que representa un espacio vacio en el layout, cuyo tamaño puede ser alterado a traves de modificadores.
     Spacer(
         modifier = Modifier
             .height(5.dp)

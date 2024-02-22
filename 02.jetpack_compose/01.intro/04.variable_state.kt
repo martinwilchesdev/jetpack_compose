@@ -1,20 +1,14 @@
 // Importacion de todo lo relacionado a remember (set, get) para asi poder manipular las variables en tiempo de ejecucion
 import androidx.compose.runtime.*
 
-class MainActivity: ComponentActivity() {
-    /* ... */
-}
-
 @Composable
 fun Content() {
     /*
-        Las variables cuyo valor es modificado en tiempo real se utiliza mediante remember
-        Estas variables deben estar definidas dentro de un metodo Composable
+        Para modificar el valor de una variable y que el sistema recuerde su estado anterior, esta debe ser definida haciendo uso de remember.
+    |   Estas variables deben estar definidas dentro de un metodo Composable al que pertenecen.
     */
-
-    // El valor de la variable es agregado al mutableStateOf() y con el remember se recuerda el valor anterior en el estado de la variable
     var likes = by remember {
-        mutableStateOf(0)
+        mutableStateOf(0) // El valor inicial y los valores posteriores de la variable son agregado al mutableStateOf() como parametro
     }
 
     Column(
@@ -30,11 +24,12 @@ fun Content() {
         ) {
             Button(
                 onClick = {
-                    likes++
+                    likes++ // El evento click del boton modifica el estado de la variable likes
                 }
             ) {
                 Text(text = "Me gusta")
             }
+            Text(text = "$likes Me gusta")
         }
     }
 }

@@ -1,9 +1,4 @@
-// lazyRow y lazyColumn se utilizan para cuando la cantidad de elementos que contienen no se visualizan en su totalidad en la interfaz de la aplicacion
-
-class MainActivity: ComponentActivity() {
-    /* ... */
-}
-
+// lazyRow y lazyColumn se utilizan en la maquetacion de la aplicacion, cuando la cantidad de elementos que contienen no se alcanzan a visualizar en su totalidad en la interfaz debido al espacio que dichos elementos ocupan
 val items = listOf(
     Color.Red,
     Color.Yellow,
@@ -22,7 +17,7 @@ fun Content() {
             .wrapContentSize(Alignment.Center)
             .padding(5.dp)
     ) {
-        // lazyRow se utiiza generalmente cuando se trabajan con bases de datos, ya que no es necesario cargar todos los datos a la vez en la interfaz sino que estos son cargados a medida que se realiza scroll
+        // lazyRow y lazyColumn se utiiza generalmente cuando se trabajan con bases de datos, ya que no es necesario cargar todos los datos a la vez en la interfaz sino que estos van apareciendo a medida que se va realizando scroll en la pantalla.
         lazyRow() {
             item(items) { item ->
                 Circulo(item)
